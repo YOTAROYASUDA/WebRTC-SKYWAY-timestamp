@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebRTC-SKYWAY</title>
+  <style>
+    #local-video {
+      width: 300px;
+      border: 1px solid #ccc;
+    }
+    .field_1{
+      display: inline-block;
+      position: fixed;
+      z-index: 10000;
+    }
+    .field_2{
+      position: relative;
+      top: 30px;
+      left: 30px;
+    }
+  </style>
+  <script type="module" crossorigin src="/WebRtC-SKYWAY-timestamp/assets/index-ReQuSBMI.js"></script>
+</head>
+
+<body>
+<div class="field_1">
+  <label>
+    <input type="checkbox" id="is-sender" />
+    送信側
+  </label>
+
+  <label>
+    ルーム名：
+    <input type="text" id="room-name" placeholder="room-name" />
+  </label>
+
+  <button id="join">接続</button>
+  <button id="leave">切断</button>
+</div>
+
+<div class="field_2">
+  <p>自分のID: <span id="my-id"></span></p>
+
+  <video id="local-video" autoplay muted playsinline></video>
+</div>
+
+  <div id="remote-media-area"></div>
+
+</body>
+</html>
+
